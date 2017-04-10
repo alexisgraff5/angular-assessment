@@ -2,7 +2,7 @@ angular.module('assessment').controller('productDetailsCtrl', function($scope, $
    $scope.getProductInfo = function() {
     shopService.getProductInfo().then(function(response) {
         console.log(response);
-      $scope.products = response;
+      $scope.product = response.data;
     })
   }
   $scope.getProductInfo();
